@@ -1,11 +1,14 @@
-# ssh-as-system-service
-for mac and linux
+Here's the polished version of your README:
 
-should consider AFTER network is established
+# SSH as a System Service
+For macOS and Linux
 
-## Mac
-write sth. like
-"""
+Ensure this is done after the network is established.
+
+## macOS
+Create a plist file with the following content and place it in `/Library/LaunchAgents/com.blabla.plist`:
+
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -22,5 +25,6 @@ write sth. like
     </array>
 </dict>
 </plist>
-"""
-into your /Library/LaunchAgents/com.blabla.plist, where /Users/your_user_name/blabla.sh is the script for your ssh port forwarding.
+```
+
+Replace `/Users/your_user_name/blabla.sh` with the path to your SSH port forwarding script.
